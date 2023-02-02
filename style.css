@@ -888,18 +888,11 @@ button, input, select, textarea {
 /**
  * Project - Post Item
  */
-.postItem__image img {
-  aspect-ratio: 1.3333333333;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .postItem__info {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 0.75rem;
-  margin-bottom: 0.375rem;
   font-size: 0.875rem;
 }
 .postItem__date {
@@ -915,15 +908,10 @@ button, input, select, textarea {
   align-items: center;
 }
 .postItem__terms a {
-  margin-left: 0.5em;
+  margin-left: 0.375rem;
 }
 .postItem__heading {
-  margin-top: 0.75rem;
-  margin-bottom: 0.375rem;
   font-size: 1.33rem;
-}
-.postItem__excerpt {
-  margin-bottom: 0.375rem;
 }
 .postItem.--single {
   display: flex;
@@ -936,7 +924,7 @@ button, input, select, textarea {
 }
 .postItem.--single .postItem__content {
   flex: 5 1 30rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0.75rem;
 }
 
 /**
@@ -945,6 +933,28 @@ button, input, select, textarea {
 .postList {
   list-style: none;
   padding-left: 0;
+}
+.postList .postItem__image img {
+  aspect-ratio: 1.3333333333;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.postList .postItem__info {
+  margin-top: 0.75rem;
+  margin-bottom: 0.375rem;
+}
+.postList .postItem__heading {
+  margin-top: 0.75rem;
+  margin-bottom: 0.375rem;
+  font-size: 1.17rem;
+}
+.postList .postItem__excerpt {
+  margin-bottom: 0.375rem;
+}
+.postList .postItem__excerpt, .postList .postItem__more {
+  font-size: 0.875rem;
+  line-height: 2.025;
+  letter-spacing: 0.04rem;
 }
 .postList.--grid {
   display: flex;
@@ -959,14 +969,6 @@ button, input, select, textarea {
   .postList.--grid .postList__item {
     flex: 0 1 24rem;
   }
-}
-.postList.--grid .postItem__heading {
-  font-size: 1.17rem;
-}
-.postList.--grid .postItem__excerpt, .postList.--grid .postItem__more {
-  font-size: 0.875rem;
-  line-height: 2.025;
-  letter-spacing: 0.04rem;
 }
 .postList.--grid .postItem__more {
   text-align: center;
@@ -991,14 +993,6 @@ button, input, select, textarea {
 }
 .postList.--list .postItem__content {
   flex: 6 1 36rem;
-}
-.postList.--list .postItem__heading {
-  font-size: 1.17rem;
-}
-.postList.--list .postItem__excerpt, .postList.--list .postItem__more {
-  font-size: 0.875rem;
-  line-height: 2.025;
-  letter-spacing: 0.04rem;
 }
 .postList.--list .postItem__more {
   text-align: right;

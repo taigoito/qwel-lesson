@@ -3,17 +3,8 @@
  */
 
 .postItem {
-  &__image {
-    img {
-      aspect-ratio: 1 / $imgAspectRatio;
-      object-fit: cover;
-    }
-  }
-
   &__info {
     @include row(flex-start);
-    margin-top: space(2);
-    margin-bottom: space(1);
     font-size: $smallFontSize;
   }
 
@@ -25,18 +16,12 @@
     @include row(flex-start);
 
     a {
-      margin-left: 0.5em;
+      margin-left: space(1);
     }
   }
 
   &__heading {
-    margin-top: space(2);
-    margin-bottom: space(1);
     font-size: $h3FontSize;
-  }
-
-  &__excerpt {
-    margin-bottom: space(1);
   }
 
   &.--single {
@@ -49,7 +34,7 @@
 
       &__content {
         @include col(5, true);
-        margin-bottom: space(4);
+        margin-bottom: space(2);
       }
     }
   }
