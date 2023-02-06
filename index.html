@@ -3,289 +3,118 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starter Template</title>
+    <title>鋤と鉋とプログラミング - 子ども向けプログラミング教室講師ブログ</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="favicon.ico">
   </head>
   <body>
-    <header id="header" class="header">
-      <div class="header__inner">
-        <div class="header__container">
-          <nav id="gNav" class="gNav">
-            <h1 class="gNav__siteBrand">
-              <a href="/">Site Title</a>
-            </h1>
-            <ul class="gNav__primaryMenu --visible_md">
-              <li class="gNav__menuItem"><a href="#feature">feature</a></li>
-              <li class="gNav__menuItem"><a href="#about">about</a></li>
-              <li class="gNav__menuItem"><a href="#service">service</a></li>
-              <li class="gNav__menuItem"><a href="#news">news</a></li>
-              <li class="gNav__menuItem"><a href="#team">team</a></li>
-              <li class="gNav__menuItem"><a href="#access">access</a></li>
-              <li class="gNav__menuItem"><a href="#contact">contact</a></li>
-            </ul>
-            <ul class="gNav__socialMenu --visible_md">
-              <li class="gNav__menuItem --social"><a href="https://twitter.com/"><span data-icon="ei-sc-twitter" data-size="m"></span></a></li>
-              <li class="gNav__menuItem --social"><a href="https://facebook.com/"><span data-icon="ei-sc-facebook" data-size="m"></span></a></li>
-              <li class="gNav__menuItem --social"><a href="https://instagram.com/"><span data-icon="ei-sc-instagram" data-size="m"></span></a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <main id="main" class="main">
-      <header id="hero" class="hero">
-        <div class="hero__content">
-          <p>Welcome to our website.</p>
+    <div id="app">
+      <header id="header" class="header">
+        <div class="header__inner">
+          <div class="header__container">
+            <nav id="gNav" class="gNav">
+              <h1 class="gNav__siteBrand">
+                <a href="./">
+                  <span class="gNav__title">{{ title }}</span>
+                  <span class="gNav__subTitle">{{ subTitle }}</span>
+                </a>
+              </h1>
+              <ul class="gNav__primaryMenu">
+                <li class="gNav__menuItem" v-for="item in menuItems">
+                  <a :href="item.href">{{ item.name }}</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
-      <section id="feature" class="section">
-        <div class="section__inner">
-          <h2 class="section__heading">feature</h2>
-          <div class="slider --mt_3 --mb_2">
-            <figure class="slider__inner">
-              <figure class="slider__item">
-                <img class="slider__image" src="./assets/sampleImg00.jpg">
-                <figcaption class="slider__caption"><a href="#">feature 1. title here</a></figcaption>
-              </figure>
-              <figure class="slider__item">
-                <img class="slider__image" src="./assets/sampleImg01.jpg">
-                <figcaption class="slider__caption"><a href="#">feature 2. title here</a></figcaption>
-              </figure>
-              <figure class="slider__item">
-                <img class="slider__image" src="./assets/sampleImg02.jpg">
-                <figcaption class="slider__caption"><a href="#">feature 3. title here</a></figcaption>
-              </figure>
-              <figure class="slider__item">
-                <img class="slider__image" src="./assets/sampleImg03.jpg">
-                <figcaption class="slider__caption"><a href="#">feature 4. title here</a></figcaption>
-              </figure>
-            </figure>
+      <main id="main" class="main">
+        <div class="main__container">
+          <div class="main__content">
+            <article id="article" class="article"></article>
+          </div>
+          <div class="main__aside">
+            <aside class="sidebar">
+              <h2>新着記事</h2>
+              <ul class="sidebar__list listItems">
+                <li class="listItems__item" v-for="item in content">
+                  <a :href="`#${item.slug}`">
+                    <span class="listItems__date">{{ item.date }}</span>
+                    <span class="listItems__title">{{ item.title }}</span>
+                  </a>
+                </li>
+              </ul>
+            </aside>
           </div>
         </div>
-      </section>
-      <section id="about" class="section">
-        <div class="section__inner">
-          <h2 class="section__heading">about</h2>
-          <div class="section__container">
-            <article class="postItem --single">
-              <figure class="postItem__image">
-                <img src="./assets/sampleImg01.jpg">
-              </figure>
-              <div class="postItem__content">
-                <h3 class="postItem__heading">Mission</h3>
-                <p class="postItem__excerpt">Our mission is ...</p>
-                <div class="postItem__more">
-                  <a class="btn --primary">read more</a>
-                </div>
-              </div>
-            </article>
+      </main>
+      <footer id="footer" class="footer">
+        <div class="footer__inner">
+          <div class="footer__container">
+            <small v-html="copyright"></small>
           </div>
         </div>
-      </section>
-      <section id="service" class="section">
-        <div class="section__inner">
-          <h2 class="section__heading">service</h2>
-          <div class="section__container">
-            <div class="postList --grid">
-              <div class="postList__item">
-                <section class="postItem">
-                  <figure class="postItem__image">
-                    <img src="./assets/sampleImg02.jpg">
-                  </figure>
-                  <div class="postItem__content">
-                    <div class="postItem__info">
-                      <div class="postItem__date">2023.01.01</div>
-                      <div class="postItem__terms">
-                        <a href="#">info</a>
-                        <a href="#">news</a>
-                      </div>
-                    </div>
-                    <h3 class="postItem__heading">Article heading here.</h3>
-                    <p class="postItem__excerpt">Today is ...</p>
-                    <div class="postItem__more">
-                      <a href="#">read more &gt;</a>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="postList__item">
-                <section class="postItem">
-                  <figure class="postItem__image">
-                    <img src="./assets/sampleImg03.jpg">
-                  </figure>
-                  <div class="postItem__content">
-                    <div class="postItem__info">
-                      <div class="postItem__date">2023.01.01</div>
-                      <div class="postItem__terms">
-                        <a href="#">info</a>
-                        <a href="#">news</a>
-                      </div>
-                    </div>
-                    <h3 class="postItem__heading">Article heading here.</h3>
-                    <p class="postItem__excerpt">Today is ...</p>
-                    <div class="postItem__more">
-                      <a href="#">read more &gt;</a>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="postList__item">
-                <section class="postItem">
-                  <figure class="postItem__image">
-                    <img src="./assets/sampleImg04.jpg">
-                  </figure>
-                  <div class="postItem__content">
-                    <div class="postItem__info">
-                      <div class="postItem__date">2023.01.01</div>
-                      <div class="postItem__terms">
-                        <a href="#">info</a>
-                        <a href="#">news</a>
-                      </div>
-                    </div>
-                    <h3 class="postItem__heading">Article heading here.</h3>
-                    <p class="postItem__excerpt">Today is ...</p>
-                    <div class="postItem__more">
-                      <a href="#">read more &gt;</a>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="news" class="section">
-        <div class="section__inner">
-          <h2 class="section__heading">news</h2>
-          <div class="section__container">
-            <ul class="postList --list">
-              <li class="postList__item">
-                <div class="postItem">
-                  <figure class="postItem__image">
-                    <img src="./assets/sampleImg03.jpg">
-                  </figure>
-                  <div class="postItem__content">
-                    <div class="postItem__info">
-                      <div class="postItem__date">2023.01.01</div>
-                      <div class="postItem__terms">
-                        <a href="#">info</a>
-                        <a href="#">news</a>
-                      </div>
-                    </div>
-                    <h3 class="postItem__heading">Article heading here.</h3>
-                    <p class="postItem__excerpt">Today is ...</p>
-                    <div class="postItem__more">
-                      <a href="#">read more &gt;</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="postList__item">
-                <div class="postItem">
-                  <figure class="postItem__image">
-                    <img src="./assets/sampleImg04.jpg">
-                  </figure>
-                  <div class="postItem__content">
-                    <div class="postItem__info">
-                      <div class="postItem__date">2023.01.01</div>
-                      <div class="postItem__terms">
-                        <a href="#">info</a>
-                        <a href="#">news</a>
-                      </div>
-                    </div>
-                    <h3 class="postItem__heading">Article heading here.</h3>
-                    <p class="postItem__excerpt">Today is ...</p>
-                    <div class="postItem__more">
-                      <a href="#">read more &gt;</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="postList__item">
-                <div class="postItem">
-                  <figure class="postItem__image">
-                    <img src="./assets/sampleImg05.jpg">
-                  </figure>
-                  <div class="postItem__content">
-                    <div class="postItem__info">
-                      <div class="postItem__date">2023.01.01</div>
-                      <div class="postItem__terms">
-                        <a href="#">info</a>
-                        <a href="#">news</a>
-                      </div>
-                    </div>
-                    <h3 class="postItem__heading">Article heading here.</h3>
-                    <p class="postItem__excerpt">Today is ...</p>
-                    <div class="postItem__more">
-                      <a href="#">read more &gt;</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section id="team" class="section">
-        <div class="section__inner">
-          <h2 class="section__heading">team</h2>
-          <div class="section__container">
-            <article class="postItem --single">
-              <figure class="postItem__image">
-                <img src="./assets/sampleImg04.jpg">
-              </figure>
-              <div class="postItem__content">
-                <h3 class="postItem__heading">Mission</h3>
-                <p class="postItem__excerpt">Our mission is ...</p>
-                <div class="postItem__more">
-                  <a class="btn --primary">read more</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section id="access" class="section">
-        <div class="section__inner --pb_0">
-          <h2 class="section__heading">access</h2>
-          <div class="embed --mt_4">
-            <iframe src="https://www.google.com/maps/embed"></iframe>
-          </div>
-        </div>
-      </section>
-      <section id="contact" class="section">
-        <div class="section__inner">
-          <h2 class="section__heading">contact</h2>
-          <div class="section__container --sm">
-            <form class="form">
-              <label>氏名
-                <br><input type="text"></label>
-              <label>メールアドレス
-                <br><input type="email"></label>
-              <label>表題
-                <br><input type="text"></label>
-              <label>お問い合わせ内容
-                <br><textarea rows="8"></textarea></label>
-              <input class="btn --primary" type="submit">
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-    <div class="cover">
-      <div class="cover__image"></div>
+      </footer>
     </div>
-    <footer id="footer" class="footer">
-      <small>&copy; 2019 - 2023 QWEL DESIGN
-    </footer>
-    <script src="./js/drawerMenu.js"></script>
-    <script src="./js/embed.js"></script>
-    <script src="./js/evilIcons.js"></script>
-    <script src="./js/fader.js"></script>
-    <script src="./js/preloader.js"></script>
-    <script src="./js/responsiveColor.js"></script>
-    <script src="./js/slider.js"></script>
-    <script src="./js/init.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const data = {
+        data() {
+          return {
+            title: '鋤と鉋とプログラミング',
+            subTitle: '子ども向けプログラミング教室講師ブログ',
+            menuItems: [
+              {
+                name: 'プログラミング教室のご案内',
+                href: '/'
+              },
+              {
+                name: 'このブログについて',
+                href: './'
+              }
+            ],
+            copyright: '&copy; 2019 - 2023 QWEL DESIGN',
+            content: [
+              {
+                date: '2019-03-06',
+                title: 'シュタイナー教育の私的見解',
+                slug: 'private-view-of-waldorf-education'
+              },
+              {
+                date: '2019-02-16',
+                title: 'ユーリ・ノルシュテインの映像作品',
+                slug: 'yurinorstein'
+              },
+              {
+                date: '2018-12-15',
+                title: '世界で最初のプログラマー エイダ・ラブレス',
+                slug: 'ada-lovelace'
+              }
+            ]
+          }
+        },
+        created() {
+          const hash = location.hash || 'about';
+          const slug = hash != 'about' ? hash.slice(1) : hash;
+          fetchContent(slug);
+        }
+      }
+
+      Vue.createApp(data).mount('#app');
+
+      async function fetchContent(slug) {
+        const res = await fetch(`./content/${slug}.md`);
+        const txt = await res.text();
+        const article = document.getElementById('article');
+        article.innerHTML = marked.parse(txt);
+      }
+
+      window.addEventListener('hashchange', () => {
+        const hash = location.hash || 'about';
+        const slug = hash != 'about' ? hash.slice(1) : hash;
+        fetchContent(slug);
+      });
+
+    </script>
   </body>
 </html>

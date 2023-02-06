@@ -1,0 +1,17 @@
+/**
+ * Project - List Items
+ */
+
+.listItems {
+  @include listUnstyled();
+
+  &__item {
+    margin-bottom: space(3);
+  }
+
+  &__date, &__title {
+    display: block;
+    margin-bottom: space(1);
+    line-height: 1;
+  }
+}

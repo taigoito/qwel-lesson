@@ -2,8 +2,18 @@
  * Layout - Footer
  */
 
+$footerHeight: 6rem;
+
 .footer {
-  padding: space(5);
-  @include background("primary");
-  text-align: center;
+  height: $footerHeight;
+
+  &__inner {
+    height: 100%;
+  }
+
+  &__container {
+    @include container();
+    @include row(flex-start, center);
+    height: 100%;
+  }
 }
