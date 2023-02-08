@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鋤と鉋とプログラミング - 子ども向けプログラミング教室講師ブログ</title>
+    <title>JavaScript入門 - 子ども向けプログラミング教室</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -34,11 +34,10 @@
           </div>
           <div class="main__aside">
             <aside class="sidebar">
-              <h2>新着記事</h2>
+              <h2>目次</h2>
               <ul class="sidebar__list listItems">
                 <li class="listItems__item" v-for="item in content">
                   <a :href="`#${item.slug}`">
-                    <span class="listItems__date">{{ item.date }}</span>
                     <span class="listItems__title">{{ item.title }}</span>
                   </a>
                 </li>
@@ -61,15 +60,15 @@
       const data = {
         data() {
           return {
-            title: '鋤と鉋とプログラミング',
-            subTitle: '子ども向けプログラミング教室講師ブログ',
+            title: 'JavaScript入門',
+            subTitle: '子ども向けプログラミング教室',
             menuItems: [
               {
                 name: 'プログラミング教室のご案内',
                 href: '/'
               },
               {
-                name: 'このブログについて',
+                name: 'このサイトについて',
                 href: './'
               }
             ],

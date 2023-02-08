@@ -8,10 +8,10 @@ $themeColors:      (
   light:             #b3b3b3, // 70%
   lighter:           #d9d9d9, // 85%
   lightest:          #ffffff, // 100%
-  primaryDark:       #f47171,   // hsl(0, 85%, 70%)
-  primary:           #f9b8b8,   // hsl(0, 85%, 85%)
-  primaryLight:      #fcdcdc, // hsl(0, 85%, 92.5%)
-  secondary:         #b8d9f9, // hsl(210, 85%, 85%)
+  primaryDark:       #71b3f4, // hsl(210, 85%, 70%)
+  primary:           #95c6f6, // hsl(210, 85%, 77.5%)
+  primaryLight:      #dcecfc, // hsl(210, 85%, 92.5%)
+  secondary:         #f9b8b8  // hsl(0, 85%, 85%)
 );
 
 // 配色の配列から色指定を抽出する関数
@@ -39,5 +39,5 @@ $bodyColor:        themeColor("darkest");
 
 // リンク文字の設定
 // リンクを強調するため、_typography.scssにて、文字の装飾も設定すること
-$linkColor:        themeColor("darker");
+$linkColor:        themeColor("primary");
 $linkHoverColor:   themeColor("primaryDark");

@@ -101,11 +101,11 @@ blockquote p, blockquote cite {
 }
 
 a, a:active {
-  color: #4d4d4d;
+  color: #95c6f6;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #f47171;
+  color: #71b3f4;
   text-decoration: underline;
 }
 
@@ -169,7 +169,7 @@ button, input, select, textarea {
 }
 .header__inner {
   height: 100%;
-  background-color: #fcdcdc;
+  background-color: #dcecfc;
   color: #262626;
 }
 .header__container {
@@ -227,7 +227,7 @@ button, input, select, textarea {
   color: #262626;
 }
 .gNav__menuItem a:hover {
-  color: #f47171;
+  color: #71b3f4;
 }
 
 /**
@@ -326,19 +326,19 @@ button, input, select, textarea {
   color: #262626;
 }
 .btn.--primaryDark {
-  background-color: #f47171;
+  background-color: #71b3f4;
   color: #262626;
 }
 .btn.--primary {
-  background-color: #f9b8b8;
+  background-color: #95c6f6;
   color: #262626;
 }
 .btn.--primaryLight {
-  background-color: #fcdcdc;
+  background-color: #dcecfc;
   color: #262626;
 }
 .btn.--secondary {
-  background-color: #b8d9f9;
+  background-color: #f9b8b8;
   color: #262626;
 }
 
@@ -487,7 +487,7 @@ button, input, select, textarea {
   text-decoration: none;
 }
 .drawerMenu.--dark {
-  background-color: #f9b8b8;
+  background-color: #95c6f6;
 }
 .drawerMenu.--dark .drawerMenu__item a {
   color: #ffffff;
@@ -579,7 +579,7 @@ button, input, select, textarea {
 }
 .form [type=button], .form [type=reset], .form [type=submit] {
   display: block;
-  background-color: #f9b8b8;
+  background-color: #95c6f6;
   color: #262626;
   display: block;
   width: 12rem;
@@ -646,7 +646,7 @@ button, input, select, textarea {
   z-index: 900;
   width: 100%;
   height: 100vh;
-  background: #f9b8b8;
+  background: #95c6f6;
   opacity: 1;
   transition: opacity ease-in-out 0.5s;
 }
@@ -828,11 +828,11 @@ button, input, select, textarea {
   margin: auto;
   border: 0;
   background-color: transparent;
-  color: #fcdcdc;
+  color: #dcecfc;
   text-align: center;
 }
 .slider__prev:hover, .slider__next:hover {
-  color: #f9b8b8;
+  color: #95c6f6;
 }
 .slider__prev {
   left: 0;
@@ -853,11 +853,11 @@ button, input, select, textarea {
   height: 0.5rem;
   margin: 0.75rem;
   border-radius: 50%;
-  background-color: #f9b8b8;
+  background-color: #95c6f6;
   cursor: pointer;
 }
 .slider__navItem:not(.--current) {
-  background-color: #fcdcdc;
+  background-color: #dcecfc;
 }
 
 /**
